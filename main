@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package practice.problem;
+
+/**
+ *
+ * @author MELENDRES_COMP111
+ */
+public class PracticeProblem {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         library library = new library();
+
+        // Create and add Book objects to the library
+        book book1 = new book("1984", "George Orwell", 5, 120);
+        book book2 = new book("To Kill a Mockingbird", "Harper Lee", 3, 120);
+        library.addBook(book1);
+        library.addBook(book2);
+
+   
+        System.out.println("Before update:");
+        library.displayLibrary();
+
+   
+        library.updateBookTitle(book1, "Nineteen Eighty-Four");
+
+        // Display library details after updating book title
+        System.out.println("\nAfter updating book title:");
+        library.displayLibrary();
+
+        // Task B: Demonstrate passing a primitive (int)
+        int originalNumber = 123;
+       int originalNumberOfpages=200;
+        System.out.println("\nOriginal number before method call: " + originalNumber);
+        library.attemptPrimitiveChange(originalNumber);
+        System.out.println("Original number after method call: " + originalNumber);
+        System.out.println("Original number of pages after method call: "+originalNumberOfpages );
+    }
+}
+
+    
+    
