@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practice.problem;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ *
+ * @author MELENDRES_COMP111
+ */
+public class library {
+
+    private List<book> books;
+
+    
+    public library() {
+        books = new ArrayList<>();
+    }
+
+   
+    public void addBook(book book) {
+        books.add(book);
+    }
+
+   
+    public void updateBookTitle(book book, String newTitle) {
+        System.out.println("Updating book title from \"" + book.getTitle() + "\" to \"" + newTitle + "\".");
+        book.setTitle(newTitle);
+    } public void updateBookPages(book book,int newpages) {
+        System.out.println("Updating book title from \"" + newpages);
+        book.setnumber_of_copies(newpages);
+    }
+    
+    public void attemptPrimitiveChange(int number) {
+        System.out.println("Inside method before change: " + number);
+        number = 999;
+        System.out.println("Inside method after change: " + number);
+    }
+
+ 
+    public void displayLibrary() {
+        System.out.println("Library Inventory:");
+        for (book book : books) {
+            book.displayInfo();
+        }
+    }
+}
+
+
+
